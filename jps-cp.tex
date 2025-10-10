@@ -1,0 +1,241 @@
+\documentclass{jps-cp}
+\usepackage{txfonts} %Please comment out this line unless the txfonts package is availabe in your LaTeX system.
+\usepackage{siunitx}
+\usepackage{authblk}
+
+\title{Technical details of CS inner shield system}
+
+\author{Yusuke \textsc{Uchiyama}$^{1,2}$, Yoshinori \textsc{Fukao}$^{1,2}$, Shunsuke \textsc{Makimura}$^{1,2}$, Satoshi \textsc{Mihara}$^{1,2}$, \\
+Shaojing \textsc{Hou}$^{3}$, Xiaoyan \textsc{Ma}$^{3}$, Ye \textsc{Yuan}$^{3}$, Yao \textsc{Zhang}$^{3}$}
+
+\inst{$^{1}$Institute of Particle and Nuclear Studies, KEK, Tsukuba, Ibaraki 305-0801, Japan \\
+$^{2}$J-PARC Center, Tokai, Ibaraki 319-1195, Japan\\
+$^{3}$Institute of High Energy Physics, Chinese Academy of Sciences, 100049, Beijing, China\\}
+
+\email{yusuke.uchiyama@kek.jp}
+
+\recdate{\today}
+
+\abst{The COMET experiment, which searches for the lepton-flavor-violating muon-to-electron conversion process, is under preparation in the J-PARC Hadron Experimental Facility. To provide a high-intensity muon beam to the experiment,  pions produced from the collision of \SI{8}{\GeV} protons from the Main Ring with a graphite target are collected using a superconducting pion capture solenoid. It is necessary to install a massive radiation shield inside the capture solenoid to protect the coils from the quench as well as radiation damage.
+%The CS inner shield system is placed in a high and graded magnetic field and a vacuum volume of $\mathcal{O}(10^{-5}~\mathrm{Pa})$. 
+The main shield materials are decided to be stainless steel and copper with a thickness of \SI{420}{\mm} with a total weight of \SI{13}{\tonne}. 
+%The total heat load on the shield with a \SI{3.2}{\kW} beam is expected to be \SI{1}{\kW}, which is removed by air flowing through the bulk of the shield.  It also serves as the interface for an exchangeable target system with a precise position reference. 
+The shield is designed as a part of a complex vacuum system and
+together with peripheral equipment, it forms a high-power targetry and beam interception system.
+The whole system is designed to be exchangeable with semi-remote handling after Phase-I of COMET, at which the components will be highly radio-activated.}
+
+\kword{radiation shield, high-power targetry, muon source}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The COMET experiment \cite{comet} in the J-PARC Hadron Experimental Facility searches for the lepton-flavor-violating muon-to-electron conversion process using \SI{8}{\GeV} protons from the Main Ring. 
+In its first stage, COMET Phase-I, we aim for the single-event sensitivity of \num{3e-15} and need \SI{>1e9}{\per\second} negative muons to be stopped in aluminum targets.
+To make such a high-intensity negative muon beam, we use a \SI{490}{\mm} long graphite target hit by the primary proton beam of \SI{3.2}{\kW}.
+Pions from the production target are collected and extracted to the experiment in the backward direction by a high and graded magnetic field formed by a superconducting pion capture solenoid (CS) \cite{pcs}.
+Figure~\ref{fig:overview} shows the schematic view of the pion production system in the COMET beam room.
+
+Secondary particles from the collision of the proton beam with the production target induce heat in the cold mass of the CS and subsequently a quench of the superconductor. Exposure to irradiation also leads to degradation of thermal conductivity in the conduction-cooled superconducting coils, which limits the continuous operation of the CS system \cite{inner-shield}. Therefore, it is necessary to install a massive radiation shield inside the warm bore of CS.
+In this note, we describe the technical and engineering design of the CS inner shield system. 
+
+\begin{figure}[tb]
+\includegraphics[width=\textwidth]{fig/Overview.pdf}
+\caption{Schematics of the COMET beam room and the pion production system. It is located in the basement of the Hadron South Experimental Building in J-PARC. Trajectories in red, green, and light blue are protons, negative pions, and negative muons, respectively. One hundred \SI{8}{\GeV} protons are injected into the production target in this figure. The other particles are omitted.}
+\label{fig:overview}
+\end{figure}
+
+\section{Requirements for the CS inner shield}
+The CS inner shield system is placed in a harsh environment of photon and neutron fluxes of $F_\gamma \sim \mathcal{O}(10^9)~\unit{\per\square\cm\per\second}$ and $F_n \sim \mathcal{O}(10^{10})~\unit{\per\square\cm\per\second}$, respectively, in a high and graded magnetic field ranging from \qtyrange{4.9}{2.5}{\tesla}, and in a vacuum volume of $\mathcal{O}(10^{-4})$~\unit{\Pa}. 
+The requirements for the CS inner shield system are the following:
+\begin{enumerate}
+    \item it should suppress the heat load to the CS superconducting coils by the secondary particle irradiation below \SI{40}{\watt};
+    \item it should suppress the radiation damage to the coils down to the neutron fluence $\Phi_n < 10^{17}~\unit{\per\square\cm}$;
+    \item it should keep the temperature of its outer faces below \SI{55}{\degreeCelsius};
+    \item it should seal the vacuum of the warm bore of CS and provide an interface for the production target system to be placed with a precision of \SI{0.5}{\mm};
+    \item it should be exchangeable even after highly radio-activated ($\mathcal{O}(10)$~\unit{\milli\sievert\square\meter\per\hour});
+    \item and it should not interfere in the pion transportation in the backward direction.
+\end{enumerate}
+Requirement (1) comes from the cooling capacity of the refrigerator for the entire magnet system of the COMET Phase-I (\SI{110}{\watt}) and it can be extended by upgrading the refrigerator for Phase-II.
+Requirement (2) comes from the limit of degradation of the thermal conductivity in the aluminum thermal path in the coil. Note that this degradation can be recovered by a thermal cycle to room temperature \cite{inner-shield}. Therefore, the neutron damage limits the continuous operation of the CS system but not the total lifetime.
+
+
+
+\section{Design of shield system}
+
+\subsection{Design of shield}
+In the early stage of the design of the experiment as in Refs.~\cite{comet,inner-shield}, a tungsten-based alloy was considered as the main material of the shield.
+This is because the design at that time was based on the maximum beam power of \SI{56}{\kW} in Phase-II.
+However, it is technically challenging to construct the entire CS inner shield with tungsten.
+On the other hand, there are more choices of materials for the \SI{3.2}{\kW} beam of Phase-I.
+We decided to make it with lighter and low-cost material while keeping the possibility of upgrading it towards Phase-II. 
+%Therefore, it must be designed to be exchangeable after the Phase-I.
+
+
+\begin{figure}[tb]
+\includegraphics[width=\textwidth]{fig/CSInnerShieldDesign1.pdf}
+\caption{The design of the CS inner shield. The shield is segmented into 12 modules in the azimuth direction with modules made of SS304 and OFC. The total weight is about \SI{13}{\tonne}.}
+\label{f1}
+\end{figure}
+
+Figure~\ref{f1} shows the updated design of the CS inner shield.
+Considering the shielding power, material properties, availability, and cost, 
+ stainless steel (SS304) and oxygen-free copper (OFC) are chosen as the main shield material.
+While the outer diameter is defined to be \SI{1140}{\mm} by the radius of the warm bore of the CS (\SI{1200}{\mm}), the inner diameter is determined to be \SI{300}{\mm} from the trajectories of pions to be collected in the central \SI{4.9}{\tesla} field. 
+The thickness of 420 mm corresponds to \num{2.7} nuclear interaction length for copper. 
+The barrel part of the shield is segmented into 12 modules in the azimuth direction. Each module is 
+manufactured individually and then they are assembled with the upstream and downstream end-plates.
+
+While the CS inner shield is concentric with the CS, the production target is not
+because the proton beam is incident to the CS with an angle and bent inside the CS by its field. 
+Therefore, the distribution of secondary particles is asymmetric in the azimuth direction; i.e., necessary shielding power is different for different modules.
+The two segments exposed to the highest irradiation are occupied by the OFC modules, which have a higher density and shorter nuclear interaction and radiation lengths than the SS304 modules.
+For weight balance, two more OFC modules are placed at mirror symmetric positions.
+
+In the original design, the shape was identical for all modules with a tapered structure both in the upstream and downstream (for the proton beam) of the target to pass the bent beam.
+ The tapered structure in an azimuthal symmetric way is necessary in the upstream side for the pion collection, but it is not necessary in the downstream side.
+Five SS304 modules placed at the top side, where the beam is away, were modified in 2024 to have a straight shape at the downstream side
+ as shown in Fig.~\ref{fig:a} to reduce the air dose rate outside the beam room, especially above ground.
+
+
+The total weight with this design is about \SI{13}{\tonne}.
+The heat load on the shield is expected to be \SI{1}{\kW} in total and \SI{160}{\watt} in a module at maximum
+at a beam power of \SI{3.2}{\kW}.  
+The heat can be removed by a flow of room-temperature air through the shield body. 
+The heat load to the coils is  \SI{\sim 12}{\watt} in total and 
+the neutron fluence to the coils in 150 days beam time is $\Phi_n \sim 3\times10^{16}~\unit{\per\square\cm}$ at maximum position.
+
+\begin{figure}[tb]
+\centering
+\begin{minipage}[b]{0.45\columnwidth}
+    \centering
+    \includegraphics[width=1\columnwidth]{fig/CSInnerShieldDesign2.pdf}
+    \caption{Cross section of the SS304 modules.}
+    \label{fig:a}
+\end{minipage}
+\begin{minipage}[b]{0.54\columnwidth}
+    \centering
+    \includegraphics[width=1\columnwidth]{fig/CSInnerShieldDesign3.pdf}
+    \caption{Detailed design of the OFC module.}
+    \label{fig:b}
+\end{minipage}
+\end{figure}
+
+\subsection{Conceptual design of OFC module}
+Details of SS304 and OFC modules are different. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
+
+The main copper body consists of three parts. 
+Because copper has a high electrical conductance, a large eddy current force is applied when the surrounding magnetic field suddenly changes, for instance, when the CS is quenched. The force can be suppressed by dividing the continuous copper body by a low-conductance material. With an FEM analysis, we decided to divide one module into two parts;
+the left and right parts are separated by a \SI{10}{\mm} SS304 plate.
+The outer part serves as a cooling plate and assembled with bolted connection to the left and right parts. 
+The cooling plate is coupled with a 1/2-inch stainless steel pipe by the hot isostatic pressing or vacuum brazing technique.
+Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.
+Sufficient thermal conductance with this method was demonstrated with a prototype.
+The temperature of each part of each module will be monitored with two E-type thermocouples during the beam operation.
+
+The inner side, facing the target, is made of another part. To absorb the radiant heat of the target, this part is processed with a black-body surface treatment and it is also bolt-connected to the main body.
+The outer side is covered with a \SI{0.5}{\mm} thick SS304 thermal isolation shield to reflect back the radiant heat of the main body.
+It is electro-polished to improve the albedo.   
+Not only the thermal shield but also all surfaces of other parts are electro-polished for low outgassing rate of about \SI{3e-7}{\Pa\cubic\m/\square\m/\second}.
+
+The SS304 module consists of a single main bulk body, the black-body plate, and the thermal shield.
+The path of cooling media is made directly in the outer region of the bulk with a gun drill. 
+
+\subsection{Design of the system}
+The CS inner shield is designed as a part of a complex vacuum system. Figure~\ref{fig:system} depicts the entire system.
+Together with peripheral equipment, it forms a high-power targetry and beam interception system.
+
+\begin{figure}[tb]
+\includegraphics[width=\textwidth]{fig/CSInnerSystem.pdf}
+\caption{The CS inner shield system.}
+\label{fig:system}
+\end{figure}
+
+The shield is supported by cantilever beams from the downstream side and connected to the vacuum flanges placed outside the CS. A mechanical flange supports the load at the downstream side and it provides the position reference with a precision of \SI{0.5}{\mm}. The load at the upstream side is put on receivers prepared in the inner vessel of the CS when it is inserted and positioned in the CS.
+The central vacuum flange attached to the mechanical flange is made of aluminum to suppress activation, and it is equipped with a beam window and two feedthroughs for cooling pipes.
+It also serves as the interface for a target system with a precise position reference. 
+The target system is designed to be exchangeable independently of the CS inner shield.
+The whole system is also designed to be exchangeable with semi-remote handling after Phase-I, at which the components will be highly radio-activated. 
+The vacuum sealing between the CS flange and the mechanical flange of the CS inner shield system is made remotely using a \SI{1200}{\mm} bore pillow seal, which was developed for this purpose \cite{pillow-seal}.
+
+
+%\subsubsection{Installation and extraction method}
+We designed the method for installation and extraction to minimize the exposure of workers to the residual dose.
+The residual dose after the Phase-I operation was calculated and evaluated with a PHITS \cite{phits} simulation.
+The CS inner shield system is inserted into and extracted from CS using a crane and a dedicated cantilever lifting jig.
+The clearance between the CS bore and the diameter of the CS inner shield is \SI{\pm 10}{\mm}. 
+The position and posture of the shield during insertion/extraction are constrained at four points by guides precisely aligned in advance. The four guide points are also equipped with active cameras to remotely monitor the position and posture.
+A  \SI{100}{\mm} thick iron shielding wall is placed between the mechanical flange of the CS inner shield system and the lifting jig so that workers can approach the flange. The connection/disconnection at the feedthroughs and closing/opening the aluminum flange will be done over the shielding wall.
+The alignment of the guide and the measurement of the final positioning will be done using a 3D coordinate measuring machine. Because several reference markers embedded in the beam room were measured in advance and the coordinate system of the beam line was calibrated in the machine, the survey in situ can be done quickly in a limited space.
+
+\section{Summary}
+To make the highest intensity muon beam using the J-PARC high-power proton beam and a novel pion capture system,
+a dedicated radiation shielding system has been designed and developed.
+A design that meets the requirements for accepting \SI{3.2}{\kW} beam has been completed.
+The production and construction of the system began this year.
+As of writing, four SS304 modules are being manufactured.
+The system is extendable to accept higher beam power by upgrading the shield material with heavier material with keeping the concept of the design.
+
+
+%You can use this file as a template to prepare your manuscript for JPS Conference Proceedings\cite{cp,jpsj,ptep,instructions,format}.
+%
+%Copy \verb|jps-cp.cls| and \verb|cite.sty| onto an arbitrary directory under the texmf tree, for example, \verb|$texmf/tex/latex/jpsj|. If you have already obtained \verb|cite.sty|, you do not need to copy it.
+%
+%Many useful commands for equations are available because \verb|jps-cp.cls| automatically loads the \verb|amsmath| package. Please refer to reference books on \LaTeX\ for details on the \verb|amsmath| package.
+%
+%The \verb|twocolumn| option is not available in this class file.
+%
+%\section{Another Section}
+%\subsection{Subsection}
+%\subsubsection{Subsubsection}
+%
+%
+%\begin{table}[tbh]
+%\caption{Captions to tables and figures should be sentences.}
+%\label{t1}
+%\begin{tabular}{ll}
+%\hline
+%AAA & BBB \\
+%CCC & DDD \\
+%\hline
+%\end{tabular}
+%\end{table}
+%
+%\subsubsection{Equation numbers}
+%
+%The \verb|seceq| option resets the equation numbers at the start of each section.
+%
+%
+%
+%Label figures, tables, and equations appropriately using the \verb|\label| command, and use the \verb|\ref| command to cite them in the text as ``\verb|as shown in Fig. \ref{f1}|". This automatically labels the numbers in numerical order.
+%
+%The \verb|minipage| environment can be used to place figures horizontally.
+%
+%\begin{equation}
+%E = mc^{2}
+%\label{e1}
+%\end{equation}
+
+% \appendix
+% \section{}
+
+% Use the \verb|\appendix| command if you need an appendix(es). The \verb|\section| command should follow even though there is no title for the appendix (see above in the source of this file).
+
+%\section*{Acknowledgment}
+%This work was supported by JSPS KAKENHI Grant Number JP22K21350.
+
+\begin{thebibliography}{9}
+\bibitem{comet} R. Abramishvili, et al. (COMET collaboration), Prog. Theor. Exp. Phys. \textbf{2020}, 033C01 (2020).
+\bibitem{pcs} M. Yoshida, et al., IEEE Trans. Appl. Supercond. \textbf{25}, 4500904 (2015).
+\bibitem{inner-shield} Y. Yang, et al., IEEE Trans. Appl. Supercond. \textbf{28}, 4001405 (2018).
+\bibitem{pillow-seal} R. Kurasaki, et al., PASJ Conf. Proc. \textbf{2022}, 521 WEP007 (2022).
+\bibitem{phits} T. Sato, et al., J. Nucl. Sci. Technol. \textbf{61}, 127 (2024).
+% \bibitem{cp} The abbreviation for JPS Conference Proceedings should be ``JPS Conf. Proc." in the reference list.
+% \bibitem{jpsj} The abbreviation for the Journal of the Physical Society of Japan should be ``J. Phys. Soc. Jpn." in the reference list.
+% \bibitem{ptep} The abbreviation for the Progress of Theoretical and Experimental Physics should be ``Prog. Theor. Exp. Phys." in the reference list.
+% \bibitem{instructions} More abbreviations of journal titles are listed in ``Instructions for Preparation of Manuscript", which is available at our Web site (http://jpsj.jps.or.jp).
+% \bibitem{format} F. Author, S. Author, and T. Author, Abbreviated journal title \textbf{volume in bold face}, initial page or article number (year of publication).
+\end{thebibliography}
+
+\end{document}
+
