@@ -95,8 +95,21 @@ For weight balance as well as the balance of the axial force by eddy current app
 
 In the original design, the shape was identical for all modules with a tapered structure both in the upstream and downstream (for the proton beam) of the target to pass the bent beam.
  The tapered structure in an azimuthal symmetric way is necessary in the upstream side for the pion collection, but it is not necessary in the downstream side.
+Via MARS simulations, we identified the weak point to shield radiation from the target to the outside the beam room, especially aboveground: the opening angle of the CS inner shield at the downstream side of target.
 Five SS304 modules placed at the top side, where the beam is away, were modified in 2024 to have a straight shape at the downstream side
- as shown in Fig.~\ref{fig:a} to reduce the air dose rate outside the beam room, especially above ground.
+ as shown in Fig.~\ref{fig:a} to effectively block the radiation going upwards. %to reduce the air dose rate outside the beam room, especially above ground.
+%We proposed to modify the taper shape to a straight one for the top five modules (see Fig.~\ref{fig:CSInnerShield_Design}) to effectively block the radiation going upwards.  
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=1\linewidth]{fig/CSInnerShield_Radiation.pdf}
+\caption{Results of MARS calculation with the modified PCS inner shield design. (a) Prompt does at the first (ground) floor. The maximum does decreases from \SI{190}{\micro\sievert\per\hour} to \SI{120}{\micro\sievert\per\hour}. Note that this calculation was performed without placing the dump collimator shield. (b) Energy deposition to the PCS at different regions of the coils. (c) Ratio of the energy deposition with the modified design to that with the original design.}
+\label{fig:CSInnerShield_Radiation}
+\end{figure}
+Figure~\ref{fig:CSInnerShield_Radiation} shows the results of radiation calculation with the modified design.  This modification leads to a 40\% reduction in the radiation level aboveground with a marginal 5\% increase in the damage to the coils.
+We also performed a study using ICEDUST and confirmed a negligible impact on the detector backgrounds.
+%Based on these results, the collaboration approved the proposal and we immediately asked the manufacturer the design change.
+%Since the change is just a modification in a machining angle, which results in an increased yield rate of the already-procured raw material, they kindly accepted it for free.  
 
 
 The total weight with this design is about \SI{13}{\tonne}.
