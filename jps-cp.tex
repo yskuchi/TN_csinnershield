@@ -3,6 +3,7 @@
 \usepackage{siunitx}
 \usepackage{authblk}
 \usepackage{footmisc} 
+\usepackage{subfig}
 
 \title{Technical details of CS inner shield system}
 
@@ -134,6 +135,30 @@ the neutron (\SI{>0.1}{\MeV}) fluence to the coils in 150 days beam time is $\Ph
     \label{fig:b}
 \end{minipage}
 \end{figure}
+%
+%\begin{figure}[tbp]
+%  \centering
+%  \subfloat[Heat load]{%
+%    \includegraphics[width=0.45\textwidth]{fig/CSHeatLoad.pdf}
+%  }
+%  \hfill
+%%  \begin{subfigure}{0.45\textwidth}
+%%    \centering
+%%    \includegraphics[width=\linewidth]{fig/CSHeatLoad.pdf}
+%%    \caption{Heat load density}
+%%  \end{subfigure}
+%%  \hfill
+%  \subfloat[Caption for right figure]{%
+%    \includegraphics[width=0.45\textwidth]{CSNeutronFluence.pdf}
+%  }
+%%  \begin{subfigure}{0.45\textwidth}
+%%    \centering
+%%    \includegraphics[width=\linewidth]{CSNeutronFluence.pdf}
+%%    \caption{Neutron fluence}
+%%  \end{subfigure}
+%  \caption{Two figures side by side using subcaption}
+%  \label{fig:CSImpact}
+%\end{figure}
 
 \subsection{Conceptual design of OFC module}
 Details of SS304 and OFC modules are different. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
