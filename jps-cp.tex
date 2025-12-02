@@ -198,8 +198,7 @@ The total weight with this design is about \SI{13}{\tonne}.
 The heat load on the shield is expected to be \SI{1}{\kW} in total and \SI{160}{\watt} in a module at maximum
 at a beam power of \SI{3.2}{\kW}.  
 The heat can be removed by a flow of room-temperature air through the shield body. 
-The heat load to the coils is  \SI{\sim 13.6}{\watt} in total and 
-the neutron (\SI{>0.1}{\MeV}) fluence to the coils in 150 days beam time is $\Phi_n \sim 1\times10^{16}~\unit{\per\square\cm}$ at maximum position.
+
 
 \begin{figure}[tb]
 \centering
@@ -217,29 +216,7 @@ the neutron (\SI{>0.1}{\MeV}) fluence to the coils in 150 days beam time is $\Ph
 \end{minipage}
 \end{figure}
 %
-\begin{figure}[tbp]
-  \centering
-  \subfloat[Heat load]{%
-    \includegraphics[width=0.5\textwidth]{fig/CSHeatLoad.pdf}
-  }
-  %\hfill
-%  \begin{subfigure}{0.45\textwidth}
-%    \centering
-%    \includegraphics[width=\linewidth]{fig/CSHeatLoad.pdf}
-%    \caption{Heat load density}
-%  \end{subfigure}
-%  \hfill
-  \subfloat[Fluence of neutrons (\SI{>0.1}{\MeV}) for 150 days]{%
-    \includegraphics[width=0.5\textwidth]{fig/CSNeutronFluence.pdf}
-  }
-%  \begin{subfigure}{0.45\textwidth}
-%    \centering
-%    \includegraphics[width=\linewidth]{CSNeutronFluence.pdf}
-%    \caption{Neutron fluence}
-%  \end{subfigure}
-  \caption{Impact on the superconducting coils for an exposure to \SI{3.2}{\kilo\watt} beam.}
-  \label{fig:CSImpact}
-\end{figure}
+
 
 \subsection{Conceptual design of OFC module}
 Details of SS304 and OFC modules are different. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
@@ -313,6 +290,41 @@ In the horizontal direction, the maximum stress in the welded section does not e
 \label{fig:CSInnerShield_StructuralAnalysis}
 \end{figure}
 
+\section{Radiation damage to the coils}
+\begin{figure}[tbp]
+  \centering
+  \subfloat[Heat load]{%
+    \includegraphics[width=0.5\textwidth]{fig/CSHeatLoad.pdf}
+  }
+   \subfloat[Fluence of neutrons (\SI{>0.1}{\MeV}) for 150 days]{%
+    \includegraphics[width=0.5\textwidth]{fig/CSNeutronFluence.pdf}
+  }
+  \caption{Impact on the superconducting coils for an exposure to \SI{3.2}{\kilo\watt} beam with a 490-mm long graphite target. The horizontal axes show the different coil regions, from the upstream side of CS (with respect to the secondary beam) to the bridge solenoid. The CS coils are subdivided into 12 sections in the azimuth direction.}
+  \label{fig:CSImpact}
+\end{figure}
+The impact of the radiation on the superconducting coils was studied with PHITS (version 3.35.1).
+\Figref{fig:CSImpact}(a) shows the energy deposit density in the coils for different regions of the coils with the CS inner shield.
+The peaks correspond to the 8 and 9 o'clock positions, where the OFC modules locate.
+The total heat load is calculated by summing the deposit density with weights from the design values of the coils since the implementation of coil geometry in the PHITS simulation is not perfect. 
+The total heat load is  \SI{\sim 13.6}{\watt} (a raw value not including a safety factor).
+The neutron fluence is also evaluated as shown in \figref{fig:CSImpact}(b). Here neutrons \SI{>0.1}{\MeV} are counted because they are known to damage the coils \cite{pcs-irradiation}.  The fluence in 150 days beam exposure is $\Phi_n \sim 1\times10^{16}~\unit{\per\square\cm}$ at the maximum position.
+
+
+\begin{figure}[tbp]
+  \centering
+  \subfloat[Heat load]{%
+    \includegraphics[width=0.5\textwidth]{fig/CSHeatLoadComp.pdf}
+  }
+   \subfloat[Fluence of neutrons (\SI{>0.1}{\MeV}) for 150 days]{%
+    \includegraphics[width=0.5\textwidth]{fig/CSNeutronFluenceComp.pdf}
+  }
+  \caption{Comparison of the impact on the superconducting coils with and without the CS inner shield for an exposure to \SI{3.2}{\kilo\watt} beam with a 490-mm long graphite target. }
+  \label{fig:CSImpactComp}
+\end{figure}
+As a comparison, we also calculated these values without the CS inner shield to see the effects.
+\Figref{fig:CSImpactComp} shows the results.
+The effect of the CS inner shield is the highest at the highest heat load position, where the heat load is suppressed by a factor \num{\sim 20}. The total heat load is decreased by a factor 11.
+On the other hand, the neutron fluence is not drastically changed.
 
 
 \section{Summary}
@@ -377,6 +389,7 @@ The system is extendable to accept higher beam power by upgrading the shield mat
 \bibitem{inner-shield} Y. Yang, et al., IEEE Trans. Appl. Supercond. \textbf{28}, 4001405 (2018).
 \bibitem{pillow-seal} R. Kurasaki, et al., PASJ Conf. Proc. \textbf{2022}, 521 WEP007 (2022).
 \bibitem{phits} T. Sato, et al., J. Nucl. Sci. Technol. \textbf{61}, 127 (2024).
+\bibitem{pcs-irradiation}M. Yoshida, et al., in Proc. AIP Conf. \textbf{1435}, 167--173 (2011).
 % \bibitem{cp} The abbreviation for JPS Conference Proceedings should be ``JPS Conf. Proc." in the reference list.
 % \bibitem{jpsj} The abbreviation for the Journal of the Physical Society of Japan should be ``J. Phys. Soc. Jpn." in the reference list.
 % \bibitem{ptep} The abbreviation for the Progress of Theoretical and Experimental Physics should be ``Prog. Theor. Exp. Phys." in the reference list.
