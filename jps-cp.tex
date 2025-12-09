@@ -113,9 +113,9 @@ The COMET experiment, which searches for the lepton-flavor-violating muon-to-ele
 \tableofcontents
 
 \section{Introduction}
-The COMET experiment \cite{comet} in the J-PARC Hadron Experimental Facility searches for the lepton-flavor-violating muon-to-electron conversion process using \SI{8}{\GeV} protons from the Main Ring. 
-In its first stage, COMET Phase-I, we aim for the single-event sensitivity of \num{3e-15} and need \SI{>1e9}{\per\second} negative muons to be stopped in aluminum targets.
-To make such a high-intensity negative muon beam, we use a \SI{490}{\mm} long graphite target hit by the primary proton beam of \SI{3.2}{\kW}.
+%The COMET experiment \cite{comet} in the J-PARC Hadron Experimental Facility searches for the lepton-flavor-violating muon-to-electron conversion process using \SI{8}{\GeV} protons from the Main Ring. 
+In COMET Phase-I, we aim for the single-event sensitivity of \num{3e-15}for the lepton-flavor-violating muon-to-electron conversion process and need \SI{>1e9}{\per\second} negative muons to be stopped in aluminum targets.
+To make such a high-intensity negative muon beam, we use a \SI{490}{\mm} long graphite target hit by the \SI{8}{\GeV} primary proton beam of \SI{3.2}{\kW}.
 Pions from the production target are collected and extracted to the experiment in the backward direction by a high and graded magnetic field formed by a superconducting pion capture solenoid (CS) \cite{pcs}.
 Figure~\ref{fig:overview} shows the schematic view of the pion production system in the COMET beam room.
 
@@ -145,8 +145,10 @@ Requirement (2) comes from the limit of degradation of the thermal conductivity 
 
 
 \section{Design of shield system}
+Please note that unless specified ``upstream/downstream'' indicate those with respect to the primary beam for the CS inner shield system. It could be opposite for other systems (such as secondary beam line and detectors).
 
-\subsection{Design of shield}
+
+\subsection{Overview of the shield design}
 In the early stage of the design of the experiment as in Refs.~\cite{comet,inner-shield}, a tungsten-based alloy was considered as the main material of the shield.
 This is because the design at that time was based on the maximum beam power of \SI{56}{\kW} in Phase-II.
 However, it is technically challenging to construct the entire CS inner shield with tungsten.
@@ -217,8 +219,35 @@ The heat can be removed by a flow of room-temperature air through the shield bod
 \end{figure}
 %
 
+\subsection{Design of SS304 module}
+The SS304 module consists of SS304 shields and related equipment (thermal shield plates, blackbody plate, cooling pipes, cooling pipe covers, connection plates). The external dimensions are long block shapes (length 1655 mm) covering an azimuthal angle of 30 degrees from the beam axis, with a weight of approximately \SI{1}{\tonne} per module. There are two types of shield units with different shapes and details of the two units with the same shape are slightly different.
 
-\subsection{Conceptual design of OFC module}
+\subsubsection{Specification}
+\paragraph{Material}
+Forged material of non-magnetic SS304 with a density of \SI{7.6}{\gram\per\cubic\cm}or higher\footnote{The actual density of the material used in the 2024 production was \SI{7.84}{\gram\per\cubic\cm}.}. Demagnetization treatment such as solution heat treatment shall be performed. Mill sheets for the main materials shall be provided.
+
+\paragraph{Surface treatment} 
+Except for bolts and blackened areas,  electrochemical polishing and degreasing after machining (in addition if necessary buff polishing to Ra3.2 or less (\#400 equivalent) before electropolishing) shall be performed. The outgassing rate is supposed to be  \SI{3e-7}{\pascal \cubic\metre\per\square\metre\per\second}). 
+
+\paragraph{Cooling holes}
+Each SS304 shield requires air or water cooling\footnote{Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. } around the outer cylinder. Flow paths with through-holes (diameter 16 mm) in each SS304 shield shall be made with a gun drill. The air/water route shall be one round trip in the longitudinal direction. Weld a lid (cooling pipe covers) to connect the return path on the upstream side. Tolerance for the holes is 0.5 mm. If the holes are made by the two sides, match the hole at the center within 1 mm. 
+SS316L seamless pipes (1/2 inch) at least 200 mm long on the downstream side shall be joined. The joined pipes will be extended later by automatic welding (outside the scope of specifications). The whole cooling path must pass the following tightness tests:
+\begin{enumerate}
+\item PT test
+\item Leak test: \SI{<1.0e-9}{\pascal\per\cubic\metre\per\second} with a vacuum hood method
+\item Pressure test: apply \SI{1.5}{\mega\pascal} to the cooling piles using water and confirm no pressure drop within 1 hour.
+\end{enumerate}
+
+\paragraph{Blackbody plate}
+ To absorb the radiant heat of the target, blackbody plates with blackbody treatment (equivalent to RAYDENT LSL-BL) shall be bolt-connected to the part corresponding to the inner cylinder of the SS304 shield ASSY. The surface roughness of the contact faces shall be Ra3.2 or better for good thermal contact. 
+
+\paragraph{Thermal shield}
+\SI{0.5}{\mm} thick SS304 thermal isolation shields shall be bolt-connected to the surface corresponding to the outer cylinder of each SS304 shield to reflect back the radiant heat of the main body. The thermal shields shall be electrochemical polished.  %Multiple pieces are acceptable as long as they cover the entire outer cylinder surface. 
+
+\paragraph{Connection plates}
+If the adjacent module is a copper one, fasten the adjacent surface with SS304 connection plates.
+
+\subsection{Design of OFC module}
 Details of SS304 and OFC modules are different. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
 
 The main copper body consists of three parts. 
@@ -226,7 +255,7 @@ Because copper has a high electrical conductance, a large eddy current force is 
 the left and right parts are separated by a \SI{10}{\mm} SS304 plate.
 The outer part serves as a cooling plate and assembled with bolted connection to the left and right parts. 
 The cooling plate is coupled with a 1/2-inch stainless steel pipe by the hot isostatic pressing or vacuum brazing technique.
-Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.
+If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.
 Sufficient thermal conductance with this method was demonstrated with a prototype.
 The temperature of each part of each module will be monitored with two E-type thermocouples during the beam operation.
 
@@ -235,8 +264,8 @@ The outer side is covered with a \SI{0.5}{\mm} thick SS304 thermal isolation shi
 It is electro-polished to improve the albedo.   
 Not only the thermal shield but also all surfaces of other parts are electro-polished for low outgassing rate of about \SI{3e-7}{\Pa\cubic\m/\square\m/\second}.
 
-The SS304 module consists of a single main bulk body, the black-body plate, and the thermal shield.
-The path of cooling media is made directly in the outer region of the bulk with a gun drill. 
+%The SS304 module consists of a single main bulk body, the black-body plate, and the thermal shield.
+%The path of cooling media is made directly in the outer region of the bulk with a gun drill. 
 
 \subsection{System overview}
 The CS inner shield is designed as a part of a complex vacuum system. Figure~\ref{fig:system} depicts the entire system.
@@ -299,14 +328,14 @@ In the horizontal direction, the maximum stress in the welded section does not e
    \subfloat[Fluence of neutrons (\SI{>0.1}{\MeV}) for 150 days]{%
     \includegraphics[width=0.5\textwidth]{fig/CSNeutronFluence.pdf}
   }
-  \caption{Impact on the superconducting coils for an exposure to \SI{3.2}{\kilo\watt} beam with a 490-mm long graphite target. The horizontal axes show the different coil regions, from the upstream side of CS (with respect to the secondary beam) to the bridge solenoid. The CS coils are subdivided into 12 sections in the azimuth direction.}
+  \caption{Impact on the superconducting coils for an exposure to \SI{3.2}{\kilo\watt} beam with a 490-mm long graphite target and \SI{4.4}{\tesla} CS field. The horizontal axes show the different coil regions, from the upstream side of CS (with respect to the secondary beam) to the bridge solenoid. The CS coils are subdivided into 12 sections in the azimuthal direction.}
   \label{fig:CSImpact}
 \end{figure}
 The impact of the radiation on the superconducting coils was studied with PHITS (version 3.35.1).
 \Figref{fig:CSImpact}(a) shows the energy deposit density in the coils for different regions of the coils with the CS inner shield.
 The peaks correspond to the 8 and 9 o'clock positions, where the OFC modules locate.
 The total heat load is calculated by summing the deposit density with weights from the design values of the coils since the implementation of coil geometry in the PHITS simulation is not perfect. 
-The total heat load is  \SI{\sim 13.6}{\watt} (a raw value not including a safety factor).
+The total heat load is  \SI{\sim 13.6}{\watt} (not including a safety factor).
 The neutron fluence is also evaluated as shown in \figref{fig:CSImpact}(b). Here neutrons \SI{>0.1}{\MeV} are counted because they are known to damage the coils \cite{pcs-irradiation}.  The fluence in 150 days beam exposure is $\Phi_n \sim 1\times10^{16}~\unit{\per\square\cm}$ at the maximum position.
 
 
@@ -318,7 +347,7 @@ The neutron fluence is also evaluated as shown in \figref{fig:CSImpact}(b). Here
    \subfloat[Fluence of neutrons (\SI{>0.1}{\MeV}) for 150 days]{%
     \includegraphics[width=0.5\textwidth]{fig/CSNeutronFluenceComp.pdf}
   }
-  \caption{Comparison of the impact on the superconducting coils with and without the CS inner shield for an exposure to \SI{3.2}{\kilo\watt} beam with a 490-mm long graphite target. }
+  \caption{Comparison of the impact on the superconducting coils with and without the CS inner shield. }
   \label{fig:CSImpactComp}
 \end{figure}
 As a comparison, we also calculated these values without the CS inner shield to see the effects.
@@ -384,9 +413,9 @@ The system is extendable to accept higher beam power by upgrading the shield mat
 %This work was supported by JSPS KAKENHI Grant Number JP22K21350.
 
 \begin{thebibliography}{9}
-\bibitem{comet} R. Abramishvili, et al. (COMET collaboration), Prog. Theor. Exp. Phys. \textbf{2020}, 033C01 (2020).
 \bibitem{pcs} M. Yoshida, et al., IEEE Trans. Appl. Supercond. \textbf{25}, 4500904 (2015).
 \bibitem{inner-shield} Y. Yang, et al., IEEE Trans. Appl. Supercond. \textbf{28}, 4001405 (2018).
+\bibitem{comet} R. Abramishvili, et al. (COMET collaboration), Prog. Theor. Exp. Phys. \textbf{2020}, 033C01 (2020).
 \bibitem{pillow-seal} R. Kurasaki, et al., PASJ Conf. Proc. \textbf{2022}, 521 WEP007 (2022).
 \bibitem{phits} T. Sato, et al., J. Nucl. Sci. Technol. \textbf{61}, 127 (2024).
 \bibitem{pcs-irradiation}M. Yoshida, et al., in Proc. AIP Conf. \textbf{1435}, 167--173 (2011).
