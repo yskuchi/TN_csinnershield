@@ -293,7 +293,7 @@ Refer to those for SS304 module.
 %The SS304 module consists of a single main bulk body, the black-body plate, and the thermal shield.
 %The path of cooling media is made directly in the outer region of the bulk with a gun drill. 
 
-\subsection{System overview}
+\subsection{System}
 The CS inner shield is designed as a part of a complex vacuum system. Figure~\ref{fig:system} depicts the entire system.
 Together with peripheral equipment, it forms a high-power targetry and beam interception system.
 
@@ -303,36 +303,28 @@ Together with peripheral equipment, it forms a high-power targetry and beam inte
 \label{fig:system}
 \end{figure}
 
-The shield is supported by cantilever beams from the downstream side and connected to the vacuum flanges placed outside the CS. A mechanical flange supports the load at the downstream side and it provides the position reference with a precision of \SI{0.5}{\mm}. The load at the upstream side is put on receivers prepared in the inner vessel of the CS when it is inserted and positioned in the CS.
-The central vacuum flange attached to the mechanical flange is made of aluminum to suppress activation, and it is equipped with a beam window and two feedthroughs for cooling pipes.
-It also serves as the interface for a target system with a precise position reference. 
-The target system is designed to be exchangeable independently of the CS inner shield.
-The whole system is also designed to be exchangeable with semi-remote handling after Phase-I, at which the components will be highly radio-activated. 
-The vacuum sealing between the CS flange and the mechanical flange of the CS inner shield system is made remotely using a \SI{1200}{\mm} bore pillow seal, which was developed for this purpose \cite{pillow-seal}.
 
 
-%\subsubsection{Installation and extraction method}
-We designed the method for installation and extraction to minimize the exposure of workers to the residual dose.
-The residual dose after the Phase-I operation was calculated and evaluated with a PHITS \cite{phits} simulation.
-The CS inner shield system is inserted into and extracted from CS using a crane and a dedicated cantilever lifting jig.
-The clearance between the CS bore and the diameter of the CS inner shield is \SI{\pm 10}{\mm}. 
-The position and posture of the shield during insertion/extraction are constrained at four points by guides precisely aligned in advance. The four guide points are also equipped with active cameras to remotely monitor the position and posture.
-A  \SI{100}{\mm} thick iron shielding wall is placed between the mechanical flange of the CS inner shield system and the lifting jig so that workers can approach the flange. The connection/disconnection at the feedthroughs and closing/opening the aluminum flange will be done over the shielding wall.
-The alignment of the guide and the measurement of the final positioning will be done using a 3D coordinate measuring machine. Because several reference markers embedded in the beam room were measured in advance and the coordinate system of the beam line was calibrated in the machine, the survey in situ can be done quickly in a limited space.
 
-\subsection{Detailed design of the downstream flange ASSY}
-
-The shield is supported by two beams coupled to a mechanical flange system, where several vacuum flanges are mounted.
-%Designing this system (downstream flange ASSY) was also completed in FY2024.
-To check the mechanical strength of the whole system, we performed a structural analysis, and the original design turned out to be not enough against the horizontal load from the large-bore pillow seal and the seismic load.
-
+\subsubsection{Downstream flange ASSY}
+Figure~\ref{fig:CSInnerShield_downstreamFlange} shows the design of the downstream flange ASSY.
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=1\linewidth]{fig/CSInnerShield_DownstreamFlange.pdf}
 \caption{Schematics of the downstream flange ASSY.}
 \label{fig:CSInnerShield_downstreamFlange}
 \end{figure}
-Figure~\ref{fig:CSInnerShield_downstreamFlange} shows the updated design. The thickness of the mechanical flange is increased from \SI{70}{\mm} to \SI{120}{\mm} and ribs are added.
+The shield is supported by cantilever beams from the downstream side and connected to vacuum flanges placed outside the CS. A mechanical flange supports the load at the downstream side and it provides the position reference with a precision of \SI{0.5}{\mm}. The load at the upstream side is put on receivers prepared in the inner vessel of the CS when it is inserted and positioned in the CS.
+The central vacuum flange attached to the mechanical flange is made of aluminum to suppress activation, and it is equipped with a beam window and two feedthroughs for cooling pipes.
+It also serves as the interface for a target system, which is designed to be exchangeable independently of the CS inner shield, with a precise position reference. 
+The whole system is also designed to be exchangeable with semi-remote handling after Phase-I, at which the components will be highly radio-activated. 
+The vacuum sealing between the CS flange and the mechanical flange of the CS inner shield system is made remotely using a \SI{1200}{\mm} bore pillow seal, which was developed for this purpose \cite{pillow-seal}.
+
+
+%The shield is supported by two beams coupled to a mechanical flange system, where several vacuum flanges are mounted.
+%Designing this system (downstream flange ASSY) was also completed in FY2024.
+To check the mechanical strength of the system, we performed a structural analysis, and the original design (shown in \figref{fig:system}) turned out to be insufficient against the horizontal load from the large-bore pillow seal and the seismic load.
+ The thickness of the mechanical flange is increased from \SI{70}{\mm} to \SI{120}{\mm} and ribs are added.
 With this design, the deformation around the vacuum seal is less  \SI{<50}{\micro\metre}, which is less than the specification of U-TIGHT seal of \SI{100}{\micro\metre}.
 The maximum stress remains below the allowable tensile stress\footnote{JIS B 8265 Construction of pressure vessel --- General principles} 
 (\SI{129}{\newton\per\square\mm}) as shown in Fig.~\ref{fig:CSInnerShield_StructuralAnalysis}(a).
@@ -344,6 +336,17 @@ In the horizontal direction, the maximum stress in the welded section does not e
 \caption{The von Mises stress against the horizontal seismic load (0.4~G). (a) Maximum stress of \SI{117.5}{\newton\per\square\mm} is applied to a positioning pin. (b) Maximum stress within the welded section is \SI{78.9}{\newton\per\square\mm}, which is achieved by adding the rib structures.}
 \label{fig:CSInnerShield_StructuralAnalysis}
 \end{figure}
+
+
+\subsubsection{Installation and extraction method}
+We designed the method for installation and extraction to minimize the exposure of workers to the residual dose.
+The residual dose after the Phase-I operation was calculated and evaluated with a PHITS \cite{phits} simulation.
+The CS inner shield system is inserted into and extracted from CS using a crane and a dedicated cantilever lifting jig.
+The clearance between the CS bore and the diameter of the CS inner shield is \SI{\pm 10}{\mm}. 
+The position and posture of the shield during insertion/extraction are constrained at four points by guides precisely aligned in advance. The four guide points are also equipped with active cameras to remotely monitor the position and posture.
+A  \SI{100}{\mm} thick iron shielding wall is placed between the mechanical flange of the CS inner shield system and the lifting jig so that workers can approach the flange. The connection/disconnection at the feedthroughs and closing/opening the aluminum flange will be done over the shielding wall.
+The alignment of the guide and the measurement of the final positioning will be done using a 3D coordinate measuring machine. Because several reference markers embedded in the beam room were measured in advance and the coordinate system of the beam line was calibrated in the machine, the survey in situ can be done quickly in a limited space.
+
 
 \section{Radiation damage to the coils}
 \begin{figure}[tbp]
@@ -362,7 +365,7 @@ The impact of the radiation on the superconducting coils was studied with PHITS 
 The peaks correspond to the 8 and 9 o'clock positions, where the OFC modules locate.
 The total heat load is calculated by summing the deposit density with weights from the design values of the coils since the implementation of coil geometry in the PHITS simulation is not perfect. 
 The total heat load is  \SI{\sim 13.6}{\watt} (not including a safety factor).
-The neutron fluence is also evaluated as shown in \figref{fig:CSImpact}(b). Here neutrons \SI{>0.1}{\MeV} are counted because they are known to damage the coils \cite{pcs-irradiation}.  The fluence in 150 days beam exposure is $\Phi_n \sim 1\times10^{16}~\unit{\per\square\cm}$ at the maximum position.
+The neutron fluence is also evaluated as shown in \figref{fig:CSImpact}(b). Here neutrons \SI{>0.1}{\MeV} are counted because they are known to damage the coils \cite{pcs-irradiation}.  The fluence in a 150-day beam exposure is $\Phi_n \sim 1\times10^{16}~\unit{\per\square\cm}$ at the maximum position.
 
 
 \begin{figure}[tbp]
