@@ -12,6 +12,7 @@
 \usepackage{footmisc} 
 %\usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{pdfpages}
 
 \usepackage{background}
 \usepackage{listings}
@@ -101,7 +102,7 @@ $^{3}$Institute of High Energy Physics, Chinese Academy of Sciences, 100049, Bei
 
 \maketitle
 \begin{abstract}
-To provide a high-intensity muon beam to the COMET experiment,  pions produced from the collision of \SI{8}{\GeV} protons from the J-PARC Main Ring with a graphite target are collected using a superconducting pion capture solenoid. It is necessary to install a massive radiation shield inside the capture solenoid (CS) to protect the coils from the quench as well as radiation damage.
+To provide a high-intensity muon beam to the COMET experiment,  pions produced from the collision of \SI{8}{\GeV} protons from the J-PARC Main Ring with a graphite target are collected using a superconducting pion capture solenoid (CS). It is necessary to install a massive radiation shield inside the CS to protect the coils from the quench as well as radiation damage.
 This note describes the details of the CS inner shield system.
 %%The CS inner shield system is placed in a high and graded magnetic field and a vacuum volume of $\mathcal{O}(10^{-5}~\mathrm{Pa})$. 
 The main shield materials are decided to be stainless steel and copper with a thickness of \SI{420}{\mm} with a total weight of \SI{13}{\tonne}. 
@@ -170,7 +171,7 @@ Considering the shielding power, material properties, availability, and cost,
 While the outer diameter is defined to be \SI{1140}{\mm} by the radius of the warm bore of the CS (\SI{1200}{\mm}), the inner diameter is determined to be \SI{300}{\mm} from the trajectories of pions to be collected in the central \SI{4.9}{\tesla} field. 
 The thickness of 420 mm corresponds to \num{2.7} nuclear interaction length for copper. 
 The barrel part of the shield is segmented into 12 modules in the azimuth direction. Each module is 
-manufactured individually and then they are assembled with the upstream and downstream end-plates.
+manufactured individually and then they are assembled with upstream and downstream end-plates.
 
 While the CS inner shield is concentric with the CS, the production target is not
 because the proton beam is incident to the CS with an angle and bent inside the CS by its field. 
@@ -397,6 +398,56 @@ A design that meets the requirements for accepting \SI{3.2}{\kW} beam has been c
 The production and construction of the system began this year.
 As of writing, four SS304 modules are being manufactured.
 The system is extendable to accept higher beam power by upgrading the shield material with heavier material with keeping the concept of the design.
+
+
+\appendix
+\section{Drawings}
+Be careful for the treatment of the following drawings.
+They are drawn using the method of the third-angle projection.
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=90,width=1\linewidth]{fig/Fig2-1ShieldMain_SUS_v4.pdf}
+\caption{Assembly drawing of SS304 module.}
+\label{fig:SS304ASSY}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=90,width=1\linewidth]{fig/SS304PartDrawing.pdf}
+\caption{Part drawing of SS304 module main body.}
+\label{fig:SS304Part}
+\end{figure}
+
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=90,width=1\linewidth]{fig/Fig1-1ShieldMain_Cu_v2.pdf}
+\caption{Assembly drawing of OFC module.}
+\label{fig:OFCASSY}
+\end{figure}
+
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=90,width=1\linewidth]{fig/Fig1-2ShieldMain_Cu.pdf}
+\caption{Part drawing of OFC module left body.}
+\label{fig:OFCPart}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=90,width=1\linewidth]{fig/Fig3-3Upstream Endplate.pdf}
+\caption{Part drawing of the upstream endplate.}
+\label{fig:UpstreamEndplatePart}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[angle=90,width=1\linewidth]{fig/Fig3-4Downstream Endplate.pdf}
+\caption{Part drawing of the downstream endplate.}
+\label{fig:DownstreamEndplatePart}
+\end{figure}
 
 
 %You can use this file as a template to prepare your manuscript for JPS Conference Proceedings\cite{cp,jpsj,ptep,instructions,format}.
