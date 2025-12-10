@@ -115,7 +115,7 @@ The whole system is designed to be exchangeable with semi-remote handling after 
 
 \section{Introduction}
 %The COMET experiment \cite{comet} in the J-PARC Hadron Experimental Facility searches for the lepton-flavor-violating muon-to-electron conversion process using \SI{8}{\GeV} protons from the Main Ring. 
-In COMET Phase-I, we aim for the single-event sensitivity of \num{3e-15}for the lepton-flavor-violating muon-to-electron conversion process and need \SI{>1e9}{\per\second} negative muons to be stopped in aluminum targets.
+In COMET Phase-I, we aim for the single-event sensitivity of \num{3e-15} for the lepton-flavor-violating muon-to-electron conversion process and need \SI{>1e9}{\per\second} negative muons to be stopped in aluminum targets.
 To make such a high-intensity negative muon beam, we use a \SI{490}{\mm} long graphite target hit by the \SI{8}{\GeV} primary proton beam of \SI{3.2}{\kW}.
 Pions from the production target are collected and extracted to the experiment in the backward direction by a high and graded magnetic field formed by a superconducting pion capture solenoid (CS) \cite{pcs}.
 Figure~\ref{fig:overview} shows the schematic view of the pion production system in the COMET beam room.
@@ -130,7 +130,7 @@ In this note, we describe the technical and engineering design of the CS inner s
 \end{figure}
 
 \section{Requirements for the CS inner shield}
-The CS inner shield system is placed in a harsh environment of photon and neutron fluxes of $F_\gamma \sim \mathcal{O}(10^9)~\unit{\per\square\cm\per\second}$ and $F_n \sim \mathcal{O}(10^{10})~\unit{\per\square\cm\per\second}$, respectively, in a high and graded magnetic field ranging from \qtyrange{4.9}{2.5}{\tesla}, and in a vacuum volume of $\mathcal{O}(10^{-4})$~\unit{\Pa}. 
+The CS inner shield system is placed in a harsh environment of photon and neutron fluxes of $F_\gamma \sim \mathcal{O}(10^9)~\unit{\per\square\cm\per\second}$ and $F_n \sim \mathcal{O}(10^{10})~\unit{\per\square\cm\per\second}$, respectively, in a high and graded magnetic field ranging \qtyrange{4.9}{2.5}{\tesla}, and in a vacuum volume of $\mathcal{O}(10^{-4})$~\unit{\Pa}. 
 The requirements for the CS inner shield system are the following:
 \begin{enumerate}
     \item it should suppress the heat load to the CS superconducting coils by the secondary particle irradiation below \SI{40}{\watt};
@@ -146,11 +146,11 @@ Requirement (2) comes from the limit of degradation of the thermal conductivity 
 
 
 \section{Design of shield system}
-Please note that unless specified ``upstream/downstream'' indicate those with respect to the primary beam for the CS inner shield system. It could be opposite for other systems (such as secondary beam line and detectors).
+Please note that unless specified ``upstream/downstream'' indicate those with respect to the primary proton beam with regard to the CS inner shield system; namely the beam dump side is downstream. It could be opposite for other systems (such as secondary beam line and detectors).
 
 
 \subsection{Overview of the shield design}
-In the early stage of the design of the experiment as in Refs.~\cite{comet,inner-shield}, a tungsten-based alloy was considered as the main material of the shield.
+In the early stage of the design of the experiment as in Refs.~\cite{inner-shield,comet}, a tungsten-based alloy was considered as the main material of the shield.
 This is because the design at that time was based on the maximum beam power of \SI{56}{\kW} in Phase-II.
 However, it is technically challenging to construct the entire CS inner shield with tungsten.
 On the other hand, there are more choices of materials for the \SI{3.2}{\kW} beam of Phase-I.
@@ -178,7 +178,7 @@ Therefore, the distribution of secondary particles is asymmetric in the azimuth 
 The two segments exposed to the highest irradiation are occupied by the OFC modules, which have a higher density and shorter nuclear interaction and radiation lengths than the SS304 modules.
 For weight balance as well as the balance of the axial force by eddy current applied to the OFC modules in case of a quench of CS, two more OFC modules are placed at mirror symmetric positions.
 
-In the original design, the shape was identical for all modules with a tapered structure both in the upstream and downstream (for the proton beam) of the target to pass the bent beam.
+In the original design, the shape was identical for all modules with a tapered structure both in the upstream and downstream of the target to pass the bent beam.
  The tapered structure in an azimuthal symmetric way is necessary in the upstream side for the pion collection, but it is not necessary in the downstream side.
 Via MARS simulations, we identified the weak point to shield radiation from the target to the outside the beam room, especially aboveground: the opening angle of the CS inner shield at the downstream side of target.
 Five SS304 modules placed at the top side, where the beam is away, were modified in 2024 to have a straight shape at the downstream side
@@ -225,45 +225,70 @@ The SS304 module consists of SS304 shields and related equipment (thermal shield
 
 \subsubsection{Specification}
 \paragraph{Material}
-Forged material of non-magnetic SS304 with a density of \SI{7.6}{\gram\per\cubic\cm}or higher\footnote{The actual density of the material used in the 2024 production was \SI{7.84}{\gram\per\cubic\cm}.}. Demagnetization treatment such as solution heat treatment shall be performed. Mill sheets for the main materials shall be provided.
+Forged material of non-magnetic SS304 with a density of \SI{7.6}{\gram\per\cubic\cm} or higher\footnote{The actual density of the material used in the 2024 production was \SI{7.84}{\gram\per\cubic\cm}.} shall be used. Demagnetization treatment such as solution heat treatment shall be performed. Mill sheets for the main materials shall be provided.
 
 \paragraph{Surface treatment} 
 Except for bolts and blackened areas,  electrochemical polishing and degreasing after machining (in addition if necessary buff polishing to Ra3.2 or less (\#400 equivalent) before electropolishing) shall be performed. The outgassing rate is supposed to be  \SI{3e-7}{\pascal \cubic\metre\per\square\metre\per\second}). 
 
 \paragraph{Cooling holes}
-Each SS304 shield requires air or water cooling\footnote{Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. } around the outer cylinder. Flow paths with through-holes (diameter 16 mm) in each SS304 shield shall be made with a gun drill. The air/water route shall be one round trip in the longitudinal direction. Weld a lid (cooling pipe covers) to connect the return path on the upstream side. Tolerance for the holes is 0.5 mm. If the holes are made by the two sides, match the hole at the center within 1 mm. 
-SS316L seamless pipes (1/2 inch) at least 200 mm long on the downstream side shall be joined. The joined pipes will be extended later by automatic welding (outside the scope of specifications). The whole cooling path must pass the following tightness tests:
+Each SS304 shield requires air or water cooling\footnote{Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.} around the outer cylinder. Flow paths (through-holes with a diameter 16 mm) in each SS304 shield shall be made with a gun drill. The air/water route shall be one round trip in the longitudinal direction. Weld a lid (cooling pipe covers) to connect the return path on the upstream side. Tolerance for the holes is 0.5 mm. If the holes are made by the two sides, match the hole at the center within 1 mm. 
+SS316L seamless pipes (1/2 inch) at least 200 mm long on the downstream side shall be joined. The joined pipes will be extended later by automatic welding to the outside of the vacuum volume via feedthroughs. The whole cooling path must pass the following tightness tests:
 \begin{enumerate}
 \item PT test
 \item Leak test: \SI{<1.0e-9}{\pascal\per\cubic\metre\per\second} with a vacuum hood method
 \item Pressure test: apply \SI{1.5}{\mega\pascal} to the cooling piles using water and confirm no pressure drop within 1 hour.
 \end{enumerate}
 
+\paragraph{Temperature measurement}
+The temperature of each SS shield will be measured with two E-type thermocouples. Taps and grooves for fixing and wiring the thermocouples shall be made. 
+
 \paragraph{Blackbody plate}
- To absorb the radiant heat of the target, blackbody plates with blackbody treatment (equivalent to RAYDENT LSL-BL) shall be bolt-connected to the part corresponding to the inner cylinder of the SS304 shield ASSY. The surface roughness of the contact faces shall be Ra3.2 or better for good thermal contact. 
+ To absorb the radiant heat of the target, blackbody plates with blackbody treatment (equivalent to RAYDENT LSL-BL) shall be bolt-connected to the inner side. The surface roughness of the contact faces shall be Ra3.2 or better for good thermal contact. 
 
 \paragraph{Thermal shield}
-\SI{0.5}{\mm} thick SS304 thermal isolation shields shall be bolt-connected to the surface corresponding to the outer cylinder of each SS304 shield to reflect back the radiant heat of the main body. The thermal shields shall be electrochemical polished.  %Multiple pieces are acceptable as long as they cover the entire outer cylinder surface. 
+\SI{0.5}{\mm} thick SS304 thermal isolation shields shall be bolt-connected to the the outer side to reflect back the radiant heat of the main body. They shall be electrochemical polished to improve the albedo.    %Multiple pieces are acceptable as long as they cover the entire outer cylinder surface. 
 
 \paragraph{Connection plates}
 If the adjacent module is a copper one, fasten the adjacent surface with SS304 connection plates.
 
+\paragraph{Bolt fastening}
+Bolts with through holes shall be used if the tapped part is not through. Lifting taps shall be plugged with sealing plugs. Ensure no grease is applied to taps in contact with the vacuum or use radiation-tolerant high-vacuum grease, MORESCO RG-42R-1. Consider anti-loosening measures for all fastening bolts.
+
 \subsection{Design of OFC module}
-Details of SS304 and OFC modules are different. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
+Details of OFC modules are different from the SS304 one. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
 
 The main copper body consists of three parts. 
 Because copper has a high electrical conductance, a large eddy current force is applied when the surrounding magnetic field suddenly changes, for instance, when the CS is quenched. The force can be suppressed by dividing the continuous copper body by a low-conductance material. With an FEM analysis, we decided to divide one module into two parts;
 the left and right parts are separated by a \SI{10}{\mm} SS304 plate.
 The outer part serves as a cooling plate and assembled with bolted connection to the left and right parts. 
 The cooling plate is coupled with a 1/2-inch stainless steel pipe by the hot isostatic pressing or vacuum brazing technique.
-If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.
+%If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.
 Sufficient thermal conductance with this method was demonstrated with a prototype.
-The temperature of each part of each module will be monitored with two E-type thermocouples during the beam operation.
+%The temperature of each part of each module will be monitored with two E-type thermocouples during the beam operation.
 
-The inner side, facing the target, is made of another part. To absorb the radiant heat of the target, this part is processed with a black-body surface treatment and it is also bolt-connected to the main body.
-The outer side is covered with a \SI{0.5}{\mm} thick SS304 thermal isolation shield to reflect back the radiant heat of the main body.
-It is electro-polished to improve the albedo.   
-Not only the thermal shield but also all surfaces of other parts are electro-polished for low outgassing rate of about \SI{3e-7}{\Pa\cubic\m/\square\m/\second}.
+%The inner side, facing the target, is made of another part. To absorb the radiant heat of the target, this part is processed with a black-body surface treatment and it is also bolt-connected to the main body.
+%The outer side is covered with a \SI{0.5}{\mm} thick SS304 thermal isolation shield to reflect back the radiant heat of the main body.
+%It is electro-polished to improve the albedo.   
+%Not only the thermal shield but also all surfaces of other parts are electro-polished for low outgassing rate of about \SI{3e-7}{\Pa\cubic\m/\square\m/\second}.
+
+\subsubsection{Specification}
+\paragraph{Material}
+Rolled material of oxygen-free copper (C10200) with a density of 8.9 g/cm³ or higher shall be used. Mill sheets for the main materials shall be provided.
+
+\paragraph{Surface treatment} 
+Except for bolts, blackened, and brazed areas,  buff polishing to Ra3.2 or less (\#400 equivalent)  shall be performed after machining, followed by acetone cleaning and then pickling. 
+
+\paragraph{Temperature measurement}
+The temperature of each copper part (left-, right-parts, and cooling plate) will be measured with two E-type thermocouples. Taps and grooves for fixing and wiring the thermocouples shall be made. 
+
+\paragraph{Bolt fastening}
+Helicoil inserts shall be used for all bolt fastening parts in copper material, adopting a tightening torque of 0.5 T series. Other specifications are the same as those for SS304 module.
+
+\paragraph{Connection plates}
+Each copper module shall be fastened to adjacent modules with SS304 connection plates.
+
+\paragraph{Blackbody plate and thermal shield}
+Refer to those for SS304 module.
 
 %The SS304 module consists of a single main bulk body, the black-body plate, and the thermal shield.
 %The path of cooling media is made directly in the outer region of the bulk with a gun drill. 
