@@ -12,7 +12,7 @@
 \usepackage{footmisc} 
 %\usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{pdfpages}
+\usepackage{enumitem}
 
 \usepackage{background}
 \usepackage{listings}
@@ -234,7 +234,7 @@ Except for bolts and blackened areas,  electrochemical polishing and degreasing 
 \paragraph{Cooling holes}
 Each SS304 shield requires air or water cooling\footnote{Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.} around the outer cylinder. Flow paths (through-holes with a diameter 16 mm) in each SS304 shield shall be made with a gun drill. The air/water route shall be one round trip in the longitudinal direction. Weld a lid (cooling pipe covers) to connect the return path on the upstream side. Tolerance for the holes is 0.5 mm. If the holes are made by the two sides, match the hole at the center within 1 mm. 
 SS316L seamless pipes (1/2 inch) at least 200 mm long on the downstream side shall be joined. The joined pipes will be extended later by automatic welding to the outside of the vacuum volume via feedthroughs. The whole cooling path must pass the following tightness tests:
-\begin{enumerate}
+\begin{enumerate}[itemsep=3pt, parsep=0pt]
 \item PT test
 \item Leak test: \SI{<1.0e-9}{\pascal\per\cubic\metre\per\second} with a vacuum hood method
 \item Pressure test: apply \SI{1.5}{\mega\pascal} to the cooling piles using water and confirm no pressure drop within 1 hour.
@@ -401,9 +401,19 @@ The system is extendable to accept higher beam power by upgrading the shield mat
 
 
 \appendix
+
+\section{Timeline}
+
+\begin{description}[itemsep=3pt, parsep=0pt]
+  \item[2024 Jul.] Bidding for the first four SS304 modules, upstream and downstream endplates (Japan).
+  \item[2025 Mar.] Delivery of the first four SS304 modules, upstream and downstream endplates (Japan).
+  \item[2025 Nov.] Fix the design and specifications for the rest four SS304 modules (China).
+\end{description}
+
 \section{Drawings}
-Be careful for the treatment of the following drawings.
+Figures~\ref{fig:SS304ASSY}--\ref{fig:DownstreamEndplatePart} shows the drawings.
 They are drawn using the method of the third-angle projection.
+Be careful for the treatment of the following drawings.
 
 \begin{figure}[p]
 \centering
