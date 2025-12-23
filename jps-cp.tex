@@ -48,6 +48,12 @@
 }
 %\usepackage[whole]{bxcjkjatype} % Just used to enable Japanese characters for temporary use
 %\usepackage{xcolor} % For text color
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% ヘッダー設定
+\fancyhead{}                % 既存のヘッダーをクリア
+\fancyhead[L]{COMET-doc-183}   % 左
 
 \sisetup{
   range-phrase=~--~,
@@ -74,7 +80,7 @@
 \SetBgColor{gray}                                 % color
 \SetBgScale{2.4}                                  % scale
 \SetBgHshift{1.6cm}                                   % location x=0 for center
-\SetBgVshift{5.6cm} 
+\SetBgVshift{5.8cm} 
 
 \title{Technical details of CS inner shield system}
 %
@@ -122,7 +128,7 @@ Trajectories in red, green, and light blue are protons, negative pions, and nega
 \end{figure}
 
 \section{Requirements for the CS inner shield}
-The CS inner shield system is placed in a harsh environment of photon and neutron fluxes of $F_\gamma \sim \mathcal{O}(10^9)~\unit{\per\square\cm\per\second}$ and $F_n \sim \mathcal{O}(10^{10})~\unit{\per\square\cm\per\second}$, respectively, in a high and graded magnetic field ranging \qtyrange{2.5}{4.9}{\tesla}, and in a vacuum volume of $\mathcal{O}(10^{-4})$~\unit{\Pa}. 
+The CS inner shield system is placed in a harsh environment of photon and neutron fluxes of $F_\gamma \sim \mathcal{O}(10^9)~\unit{\per\square\cm\per\second}$ and $F_n \sim \mathcal{O}(10^{10})~\unit{\per\square\cm\per\second}$, respectively, in a high and graded magnetic field ranging \qtyrange{2.5}{4.9}{\tesla}\footnote{Actual operational field strength is lower by a factor \qtyrange{10}{20}{\percent} than the design peak value of \SI{4.9}{T} because of the ground fault incident happened in the CS coil circuit, but the CS inner shield was designed based on the design value.}, and in a vacuum volume of $\mathcal{O}(10^{-4})$~\unit{\Pa}\footnote{In Phase-I, the vacuum level would be lower, $\mathcal{O}(10^{-2})$~\unit{\Pa}, because such high vacuum is not necessary for the graphite target.  However, the CS inner shield is designed to achieve the high vacuum level considering the future upgradability to use a radiation cooling tungsten target \cite{CM46}.}. 
 The requirements for the CS inner shield system are the following:
 \begin{enumerate}
     \item it should suppress the heat load to the CS superconducting coils by the secondary particle irradiation below \SI{40}{\watt};
@@ -193,7 +199,7 @@ We also performed a study using ICEDUST and confirmed a negligible impact on the
 
 
 The total weight with this design is about \SI{13}{\tonne}.
-The heat load on the shield is expected to be \SI{1}{\kW} in total and \SI{160}{\watt} in a module at maximum
+The heat load on the shield is expected to be \SI{1}{\kW} in total and \SI{160}{\watt} in the module at maximum
 at a beam power of \SI{3.2}{\kW}.  
 The heat can be removed by a flow of room-temperature air through the shield body. 
 
@@ -224,7 +230,7 @@ The SS304 module consists of SS304 shields and related equipment (thermal shield
 Forged material of non-magnetic SS304 with a density of \SI{7.6}{\gram\per\cubic\cm} or higher shall be used. Demagnetization treatment such as solution heat treatment shall be performed. Mill sheets for the main materials shall be provided.
 
 \paragraph{Surface treatment} 
-Except for bolts and blackened areas,  electrochemical polishing and degreasing after machining (in addition if necessary buff polishing to Ra3.2 or less (\#400 equivalent) before electropolishing) shall be performed. The outgassing rate is supposed to be  \SI{3e-7}{\pascal \cubic\metre\per\square\metre\per\second}). 
+Except for bolts and blackened areas,  electrochemical polishing and degreasing after machining (in addition if necessary buff polishing to Ra3.2 or less (\#400 equivalent) before electropolishing) shall be performed. The outgassing rate is supposed to be  \SI{3e-7}{\pascal \cubic\metre\per\square\metre\per\second}. 
 
 \paragraph{Cooling holes}
 Each SS304 shield requires air or water cooling\footnote{Air cooling is expected in the Phase-I operation, but it is designed so that water cooling is also possible. If it is necessary, for instance, in a higher beam power operation in future, we can switch to the water cooling from outside of the beam room.} around the outer cylinder. Flow paths (through-holes with a diameter 16 mm) in each SS304 shield shall be made with a gun drill. The air/water route shall be one round trip in the longitudinal direction. Weld a lid (cooling pipe covers) to connect the return path on the upstream side. Tolerance for the holes is 0.5 mm. If the holes are made by the two sides, match the hole at the center within 1 mm. 
@@ -232,11 +238,11 @@ SS316L seamless pipes (1/2 inch) at least 200 mm long on the downstream side sha
 \begin{enumerate}[itemsep=3pt, parsep=0pt]
 \item PT test
 \item Leak test: \SI{<1.0e-9}{\pascal\per\cubic\metre\per\second} with a vacuum hood method
-\item Pressure test: apply \SI{1.5}{\mega\pascal} to the cooling piles using water and confirm no pressure drop within 1 hour.
+\item Pressure test: apply \SI{1.5}{\mega\pascal} to the cooling pipes using water and confirm no pressure drop within 1 hour.
 \end{enumerate}
 
 \paragraph{Temperature measurement}
-The temperature of each SS shield will be measured with two E-type thermocouples. Taps and grooves for fixing and wiring the thermocouples shall be made. 
+The temperature of each SS304 shield will be measured with two E-type thermocouples. Taps and grooves for fixing and wiring the thermocouples shall be made. 
 
 \paragraph{Blackbody plate}
  To absorb the radiant heat of the target, blackbody plates with blackbody treatment (equivalent to RAYDENT LSL-BL) shall be bolt-connected to the inner side. The surface roughness of the contact faces shall be Ra3.2 or better for good thermal contact. 
@@ -245,14 +251,14 @@ The temperature of each SS shield will be measured with two E-type thermocouples
 \SI{0.5}{\mm} thick SS304 thermal isolation shields shall be bolt-connected to the the outer side to reflect back the radiant heat of the main body. They shall be electrochemical polished to improve the albedo.    %Multiple pieces are acceptable as long as they cover the entire outer cylinder surface. 
 
 \paragraph{Connection plates}
-If the adjacent module is a copper one, fasten the adjacent surface with SS304 connection plates.
+If the adjacent module is a OFC one, fasten the adjacent surface with SS304 connection plates.
 
 \paragraph{Bolt fastening}
 Bolts with through holes shall be used if the tapped part is not through. Lifting taps shall be plugged with sealing plugs. Ensure no grease is applied to taps in contact with the vacuum or use radiation-tolerant high-vacuum grease, MORESCO RG-42R-1. Consider anti-loosening measures for all fastening bolts.
 
 \subsection{Design of OFC module}
-Details of OFC modules are different from the SS304 one. The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
-
+%Details of OFC modules are different from the SS304 one. 
+The OFC module shown in Fig.~\ref{fig:b} has a more complex design due to its weaker mechanical strength and higher electrical conductivity.  %Here, the detailed design of more complicated OFC module is described.
 The main copper body consists of three parts. 
 Because copper has a high electrical conductance, a large eddy current force is applied when the surrounding magnetic field suddenly changes, for instance, when the CS is quenched. The force can be suppressed by dividing the continuous copper body by a low-conductance material. With an FEM analysis, we decided to divide one module into two parts;
 the left and right parts are separated by a \SI{10}{\mm} SS304 plate.
@@ -569,6 +575,7 @@ Be careful for the treatment of the following drawings.
 \begin{thebibliography}{9}
 \bibitem{pcs} M. Yoshida, et al., IEEE Trans. Appl. Supercond. \textbf{25}, 4500904 (2015).
 \bibitem{inner-shield} Y. Yang, et al., IEEE Trans. Appl. Supercond. \textbf{28}, 4001405 (2018).
+\bibitem{CM46} S. Makimura, presented in CM46 (2025), \url{https://kds.kek.jp/event/55658/contributions/294871/attachments/192087/261334/J-PARC_Target2.pdf}.
 \bibitem{comet} R. Abramishvili, et al. (COMET collaboration), Prog. Theor. Exp. Phys. \textbf{2020}, 033C01 (2020).
 \bibitem{pillow-seal} R. Kurasaki, et al., PASJ Conf. Proc. \textbf{2022}, 521 WEP007 (2022).
 \bibitem{phits} T. Sato, et al., J. Nucl. Sci. Technol. \textbf{61}, 127 (2024).
